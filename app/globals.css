@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --electric: #00f5ff;
+  --neonpink: #ff2d78;
+  --ultraviolet: #7b2fff;
+  --vividorange: #ff6b35;
+  --limegreen: #39ff14;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0f;
+  color: #f0f0f0;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0f; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7b2fff, #ff2d78);
+  border-radius: 3px;
+}
+
+/* Selection highlight */
+::selection {
+  background: rgba(123, 47, 255, 0.4);
+  color: #fff;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #ff2d78, #7b2fff, #00f5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-pink {
+    box-shadow: 0 0 30px rgba(255, 45, 120, 0.4);
+  }
+  .glow-purple {
+    box-shadow: 0 0 30px rgba(123, 47, 255, 0.4);
+  }
+  .glow-cyan {
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.4);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
