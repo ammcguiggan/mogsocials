@@ -40,7 +40,7 @@ export default function Navbar() {
           <li>
             <a
               href="#contact"
-              className="px-5 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-neonpink to-ultraviolet text-white glow-pink hover:scale-105 transition-transform"
+              className="inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-neonpink to-ultraviolet text-white glow-pink hover:scale-105 transition-transform"
             >
               Get Started
             </a>
@@ -81,7 +81,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="text-center px-5 py-2.5 rounded-full font-bold bg-gradient-to-r from-neonpink to-ultraviolet text-white"
+            className="inline-flex items-center justify-center text-center px-5 py-2.5 rounded-full font-bold bg-gradient-to-r from-neonpink to-ultraviolet text-white"
             onClick={() => setOpen(false)}
           >
             Get Started

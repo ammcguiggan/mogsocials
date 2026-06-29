@@ -3,29 +3,29 @@ import { useState, useRef, useEffect } from "react";
 
 const projects = [
   {
-    brand: "NovaDrip",
-    category: "Fashion",
+    brand: "Common Habit",
+    category: "Streetwear",
     result: "+430% TikTok growth in 60 days",
     gradient: "from-neonpink to-ultraviolet",
     tag: "Short-Form Video",
   },
   {
-    brand: "ZestFuel",
-    category: "Food & Bev",
+    brand: "Drift Soda Co.",
+    category: "Beverage",
     result: "2.1M impressions on launch campaign",
     gradient: "from-electric to-limegreen",
     tag: "Campaign Strategy",
   },
   {
-    brand: "Orbit Studio",
-    category: "Music",
+    brand: "Nightcap Collective",
+    category: "Independent Label",
     result: "80K new followers in 30 days",
     gradient: "from-vividorange to-neonpink",
     tag: "Community Building",
   },
   {
-    brand: "GlowLab",
-    category: "Beauty",
+    brand: "Bloom Theory",
+    category: "Skincare",
     result: "340% ROAS on paid social",
     gradient: "from-ultraviolet to-electric",
     tag: "Paid Social",

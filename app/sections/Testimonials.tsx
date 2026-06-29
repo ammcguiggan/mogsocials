@@ -3,25 +3,25 @@ import { useRef, useEffect, useState } from "react";
 
 const testimonials = [
   {
-    quote: "MogSocials completely transformed our TikTok. We went from 2K to 80K followers in a month. It's insane.",
-    name: "Kai R.",
-    role: "Founder, NovaDrip",
-    avatar: "KR",
-    color: "#ff2d78",
+    quote: "We were dropping product and getting crickets. MogSocials rebuilt our whole content rhythm and our last drop sold out in under an hour.",
+    name: "Jaylen O.",
+    role: "Founder, Common Habit",
+    avatar: "JO",
+    color: "#e8487e",
   },
   {
-    quote: "They understand Gen Z in a way no other agency does. Our engagement rate tripled and we finally felt like a real brand.",
-    name: "Zara T.",
-    role: "CMO, ZestFuel",
-    avatar: "ZT",
-    color: "#7b2fff",
+    quote: "Our launch video felt like it was made by someone who actually drinks the product, not an agency. That's the difference. The numbers backed it up too.",
+    name: "Mara C.",
+    role: "Co-Founder, Drift Soda Co.",
+    avatar: "MC",
+    color: "#7d5fd1",
   },
   {
-    quote: "ROI was crazy. 340% ROAS on our first paid campaign with them. Wish we found them sooner.",
+    quote: "They get the pacing of a feed in a way most agencies don't. Every campaign felt native, never like an ad.",
     name: "Dev M.",
-    role: "CEO, GlowLab",
+    role: "Founder, Bloom Theory",
     avatar: "DM",
-    color: "#00f5ff",
+    color: "#3ad6dd",
   },
 ];
 

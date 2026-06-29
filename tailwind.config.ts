@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        electric: "#00f5ff",
-        neonpink: "#ff2d78",
-        vividorange: "#ff6b35",
-        ultraviolet: "#7b2fff",
-        limegreen: "#39ff14",
+        electric: "#3ad6dd",
+        neonpink: "#e8487e",
+        vividorange: "#e8723f",
+        ultraviolet: "#7d5fd1",
+        limegreen: "#6be383",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
@@ -23,9 +23,9 @@ const config: Config = {
         "hero-gradient":
           "linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)",
         "card-gradient":
-          "linear-gradient(135deg, #ff2d78 0%, #7b2fff 50%, #00f5ff 100%)",
+          "linear-gradient(135deg, #e8487e 0%, #7d5fd1 50%, #3ad6dd 100%)",
         "cta-gradient":
-          "linear-gradient(90deg, #ff6b35 0%, #ff2d78 50%, #7b2fff 100%)",
+          "linear-gradient(90deg, #e8723f 0%, #e8487e 50%, #7d5fd1 100%)",
       },
       animation: {
         "gradient-shift": "gradientShift 6s ease infinite",
@@ -42,8 +42,8 @@ const config: Config = {
           "50%": { transform: "translateY(-12px)" },
         },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(123,47,255,0.4)" },
-          "50%": { boxShadow: "0 0 40px rgba(255,45,120,0.7)" },
+          "0%, 100%": { boxShadow: "0 0 16px rgba(125,95,209,0.25)" },
+          "50%": { boxShadow: "0 0 28px rgba(232,72,126,0.4)" },
         },
       },
     },

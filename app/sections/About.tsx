@@ -28,17 +28,18 @@ export default function About() {
         >
           <p className="text-electric text-sm font-bold uppercase tracking-widest mb-3">Our Approach</p>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-            We don't do <br />
-            <span className="text-gradient">cookie-cutter.</span>
+            Built different.<br />
+            <span className="text-gradient">On purpose.</span>
           </h2>
           <p className="text-white/60 leading-relaxed mb-6">
-            MogSocials is a Gen Z-run agency that actually understands the culture. We're not
-            trend-chasers — we're trend-setters. Every brand we work with gets a custom strategy
-            built from scratch around their audience, voice, and goals.
+            MogSocials is run by people who actually live on the internet. We know what stops a
+            scroll, what kills a comment section, and what makes a community feel real. Every brand
+            we take on gets a strategy built entirely around their audience — nothing borrowed,
+            nothing recycled.
           </p>
           <p className="text-white/60 leading-relaxed">
-            We combine creative instinct with hard data to build social presences that people
-            actually care about. Not just followers — fans.
+            We pair that instinct with hard performance data, so the work isn't just creative —
+            it compounds. More reach, deeper engagement, and an audience that actually shows up.
           </p>
         </div>
 
