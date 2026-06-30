@@ -7,9 +7,9 @@ const services = [
   {
     title: "Content Strategy",
     desc: "Data-backed content calendars built for virality. We study the algorithm so you don't have to.",
-    gradient: "from-neonpink to-ultraviolet",
-    color: "#e8487e",
-    glow: "rgba(232,72,126,0.22)",
+    gradient: "from-blade to-acid",
+    color: "#0057ff",
+    glow: "rgba(0,87,255,0.2)",
     icon: (
       // Bar chart with an upward trend line
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -23,9 +23,9 @@ const services = [
   {
     title: "Short-Form Video",
     desc: "TikTok, Reels, Shorts — we craft hooks, edits, and trends that stop the scroll cold.",
-    gradient: "from-ultraviolet to-electric",
-    color: "#7d5fd1",
-    glow: "rgba(125,95,209,0.22)",
+    gradient: "from-blade to-acid",
+    color: "#c8ff00",
+    glow: "rgba(200,255,0,0.15)",
     icon: (
       // Play button inside a rounded frame with film notch accents
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -41,9 +41,9 @@ const services = [
   {
     title: "Community Building",
     desc: "Real engagement, real community. We turn followers into loyal brand advocates.",
-    gradient: "from-electric to-limegreen",
-    color: "#3ad6dd",
-    glow: "rgba(58,214,221,0.22)",
+    gradient: "from-blade to-acid",
+    color: "#0057ff",
+    glow: "rgba(0,87,255,0.2)",
     icon: (
       // Three overlapping user circles
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -58,9 +58,9 @@ const services = [
   {
     title: "Paid Social Ads",
     desc: "ROI-positive ad campaigns on Meta, TikTok, and Snap — creative that converts.",
-    gradient: "from-vividorange to-neonpink",
-    color: "#e8723f",
-    glow: "rgba(232,114,63,0.22)",
+    gradient: "from-blade to-acid",
+    color: "#c8ff00",
+    glow: "rgba(200,255,0,0.15)",
     icon: (
       // Cursor clicking a target/bullseye
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -74,9 +74,9 @@ const services = [
   {
     title: "Influencer Collab",
     desc: "Micro to macro — we match your brand with creators whose audience is your audience.",
-    gradient: "from-limegreen to-electric",
-    color: "#6be383",
-    glow: "rgba(107,227,131,0.22)",
+    gradient: "from-blade to-acid",
+    color: "#0057ff",
+    glow: "rgba(0,87,255,0.2)",
     icon: (
       // Two nodes connected by a link — collaboration / network
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -91,9 +91,9 @@ const services = [
   {
     title: "Brand Identity",
     desc: "Visuals, voice, vibe. We build identities that are unmistakably Gen Z and unmistakably you.",
-    gradient: "from-neonpink to-vividorange",
-    color: "#e8487e",
-    glow: "rgba(232,72,126,0.22)",
+    gradient: "from-blade to-acid",
+    color: "#c8ff00",
+    glow: "rgba(200,255,0,0.15)",
     icon: (
       // Pen nib / design tool
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -126,7 +126,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
       ref={ref}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="glass rounded-2xl p-6 cursor-default transition-all duration-500"
+      className="glass p-6 cursor-default transition-all duration-500"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(40px)",
@@ -168,7 +168,7 @@ export default function Services() {
     <section id="services" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-neonpink text-sm font-bold uppercase tracking-widest mb-3">What We Do</p>
+          <p className="label-tag mb-3">What We Do</p>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             Services that <span className="text-gradient">slap.</span>
           </h2>

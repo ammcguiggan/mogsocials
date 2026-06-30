@@ -6,28 +6,28 @@ const projects = [
     brand: "Common Habit",
     category: "Streetwear",
     result: "+430% TikTok growth in 60 days",
-    gradient: "from-neonpink to-ultraviolet",
+    gradient: "from-blade to-acid",
     tag: "Short-Form Video",
   },
   {
     brand: "Drift Soda Co.",
     category: "Beverage",
     result: "2.1M impressions on launch campaign",
-    gradient: "from-electric to-limegreen",
+    gradient: "from-blade to-acid",
     tag: "Campaign Strategy",
   },
   {
     brand: "Nightcap Collective",
     category: "Independent Label",
     result: "80K new followers in 30 days",
-    gradient: "from-vividorange to-neonpink",
+    gradient: "from-blade to-acid",
     tag: "Community Building",
   },
   {
     brand: "Bloom Theory",
     category: "Skincare",
     result: "340% ROAS on paid social",
-    gradient: "from-ultraviolet to-electric",
+    gradient: "from-blade to-acid",
     tag: "Paid Social",
   },
 ];
@@ -46,7 +46,7 @@ export default function Portfolio() {
     <section id="portfolio" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-ultraviolet text-sm font-bold uppercase tracking-widest mb-3">Results</p>
+          <p className="label-tag mb-3">Results</p>
           <h2 className="text-4xl md:text-5xl font-black text-white">
             The <span className="text-gradient">proof</span> is in the numbers.
           </h2>
@@ -56,7 +56,7 @@ export default function Portfolio() {
           {projects.map(({ brand, category, result, gradient, tag }, i) => (
             <div
               key={brand}
-              className="relative overflow-hidden rounded-2xl glass group cursor-default transition-all duration-500"
+              className="relative overflow-hidden glass group cursor-default transition-all duration-500"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0) scale(1)" : "translateY(30px) scale(0.97)",

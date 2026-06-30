@@ -15,13 +15,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass py-3 shadow-lg" : "py-6 bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-obsidian/95 border-b border-white/06 py-3"
+          : "bg-transparent py-6"
       }`}
+      style={{ backdropFilter: scrolled ? "blur(12px)" : "none" }}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-2xl font-black text-gradient tracking-tight">
-          MogSocials
+        {/* Wordmark */}
+        <a href="#" className="text-lg font-black text-white tracking-tight uppercase">
+          Mog<span style={{ color: "#0057ff" }}>Socials</span>
         </a>
 
         {/* Desktop links */}
@@ -30,18 +34,15 @@ export default function Navbar() {
             <li key={l}>
               <a
                 href={`#${l.toLowerCase()}`}
-                className="text-sm font-medium text-white/70 hover:text-white transition-colors relative group"
+                className="label-tag text-white/50 hover:text-white transition-colors relative group"
               >
                 {l}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-neonpink to-ultraviolet transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-blade transition-all duration-300 group-hover:w-full" />
               </a>
             </li>
           ))}
           <li>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-neonpink to-ultraviolet text-white glow-pink hover:scale-105 transition-transform"
-            >
+            <a href="#contact" className="btn-primary text-xs">
               Get Started
             </a>
           </li>
@@ -56,7 +57,7 @@ export default function Navbar() {
           {[0, 1, 2].map((i) => (
             <span
               key={i}
-              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+              className={`block w-5 h-px bg-white transition-all duration-200 ${
                 open && i === 0 ? "rotate-45 translate-y-2" :
                 open && i === 1 ? "opacity-0" :
                 open && i === 2 ? "-rotate-45 -translate-y-2" : ""
@@ -68,12 +69,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden glass mt-2 mx-4 rounded-2xl p-6 flex flex-col gap-4">
+        <div className="md:hidden border-t border-white/06 mt-3 mx-4 p-6 flex flex-col gap-5"
+          style={{ background: "#050507" }}>
           {links.map((l) => (
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
-              className="text-white/80 hover:text-white font-medium transition-colors"
+              className="label-tag text-white/60 hover:text-white transition-colors"
               onClick={() => setOpen(false)}
             >
               {l}
@@ -81,7 +83,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="inline-flex items-center justify-center text-center px-5 py-2.5 rounded-full font-bold bg-gradient-to-r from-neonpink to-ultraviolet text-white"
+            className="btn-primary text-center text-xs"
             onClick={() => setOpen(false)}
           >
             Get Started

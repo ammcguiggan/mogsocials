@@ -7,35 +7,34 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Replace with your form submission logic (e.g., Resend, Formspree, etc.)
     setSent(true);
   };
 
   const inputClass =
-    "w-full glass rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm outline-none focus:border-ultraviolet/60 border border-transparent transition-all duration-200";
+    "w-full glass px-4 py-3 text-white placeholder-white/20 text-sm outline-none focus:border-blade/50 border border-white/07 transition-all duration-200 bg-transparent font-light tracking-wide";
 
   return (
     <section id="contact" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-vividorange text-sm font-bold uppercase tracking-widest mb-3">Contact</p>
+          <p className="label-tag mb-3">Contact</p>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             Ready to <span className="text-gradient">mog?</span>
           </h2>
-          <p className="text-white/50">
-            Tell us about your brand and we'll get back within 24 hours.
+          <p className="text-white/30 text-sm tracking-wide">
+            Tell us about your brand. We reply within 24 hours.
           </p>
         </div>
 
         {sent ? (
-          <div className="glass rounded-2xl p-12 text-center">
-            <div className="text-5xl mb-4">✦</div>
-            <h3 className="text-2xl font-black text-gradient mb-2">We got your message!</h3>
-            <p className="text-white/60">Expect a reply within 24 hours. Let's build something iconic.</p>
+          <div className="glass p-12 text-center border border-blade/20">
+            <div className="text-blade text-4xl font-black mb-4">→</div>
+            <h3 className="text-2xl font-black text-white mb-2">Message received.</h3>
+            <p className="text-white/40 text-sm">Expect a reply within 24 hours.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="glass rounded-2xl p-8 flex flex-col gap-4">
-            <div className="grid md:grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="glass p-8 flex flex-col gap-3 border border-white/06">
+            <div className="grid md:grid-cols-2 gap-3">
               <input
                 className={inputClass}
                 placeholder="Your name"
@@ -67,11 +66,9 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="w-full py-4 rounded-xl font-black text-white text-lg
-                bg-gradient-to-r from-neonpink via-ultraviolet to-electric
-                hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 glow-purple"
+              className="w-full btn-primary mt-1 py-4 text-sm"
             >
-              Send It ✦
+              Send It →
             </button>
           </form>
         )}

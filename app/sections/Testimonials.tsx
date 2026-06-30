@@ -7,21 +7,21 @@ const testimonials = [
     name: "Jaylen O.",
     role: "Founder, Common Habit",
     avatar: "JO",
-    color: "#e8487e",
+    color: "#0057ff",
   },
   {
     quote: "Our launch video felt like it was made by someone who actually drinks the product, not an agency. That's the difference. The numbers backed it up too.",
     name: "Mara C.",
     role: "Co-Founder, Drift Soda Co.",
     avatar: "MC",
-    color: "#7d5fd1",
+    color: "#c8ff00",
   },
   {
     quote: "They get the pacing of a feed in a way most agencies don't. Every campaign felt native, never like an ad.",
     name: "Dev M.",
     role: "Founder, Bloom Theory",
     avatar: "DM",
-    color: "#3ad6dd",
+    color: "#6b7280",
   },
 ];
 
@@ -36,10 +36,10 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="py-24 px-6" style={{ background: "rgba(0,245,255,0.02)" }}>
+    <section id="testimonials" className="py-24 px-6" style={{ background: "rgba(255,255,255,0.01)" }}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-limegreen text-sm font-bold uppercase tracking-widest mb-3">Testimonials</p>
+          <p className="label-tag mb-3">Testimonials</p>
           <h2 className="text-4xl md:text-5xl font-black text-white">
             Don't take our <span className="text-gradient">word for it.</span>
           </h2>
@@ -49,7 +49,7 @@ export default function Testimonials() {
           {testimonials.map(({ quote, name, role, avatar, color }, i) => (
             <div
               key={name}
-              className="glass rounded-2xl p-8 flex flex-col gap-6 transition-all duration-700"
+              className="glass p-8 flex flex-col gap-6 transition-all duration-700"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0)" : "translateY(40px)",

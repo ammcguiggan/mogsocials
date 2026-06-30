@@ -19,14 +19,14 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="py-24 px-6 overflow-hidden" style={{ background: "rgba(123,47,255,0.04)" }}>
+    <section id="about" className="py-24 px-6 overflow-hidden" style={{ background: "rgba(255,255,255,0.01)" }}>
       <div ref={ref} className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Left — text */}
         <div
           className="transition-all duration-700"
           style={{ opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(-50px)" }}
         >
-          <p className="text-electric text-sm font-bold uppercase tracking-widest mb-3">Our Approach</p>
+          <p className="label-tag mb-3">Our Approach</p>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
             Built different.<br />
             <span className="text-gradient">On purpose.</span>
@@ -49,7 +49,7 @@ export default function About() {
           style={{ opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(50px)", transitionDelay: "150ms" }}
         >
           {values.map(({ label, desc }) => (
-            <div key={label} className="glass rounded-2xl p-5 group hover:border-white/20 transition-all">
+            <div key={label} className="glass p-5 group hover:border-white/12 transition-all">
               <p className="text-gradient font-black text-lg mb-1">{label}</p>
               <p className="text-white/50 text-sm">{desc}</p>
             </div>

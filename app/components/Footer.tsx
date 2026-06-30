@@ -1,12 +1,11 @@
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 py-10 px-6 text-center">
-      <p className="text-2xl font-black text-gradient mb-2">MogSocials</p>
-      <p className="text-white/40 text-sm">
-        © {new Date().getFullYear()} MogSocials. All rights reserved.
+      <p className="text-lg font-black text-white uppercase tracking-tight mb-2">
+        Mog<span style={{ color: "#0057ff" }}>Socials</span>
       </p>
-      <p className="text-white/30 text-xs mt-2">
-        Built for the culture. Made for Gen Z.
+      <p className="label-tag">
+        © {new Date().getFullYear()} MogSocials. All rights reserved.
       </p>
     </footer>
   );
