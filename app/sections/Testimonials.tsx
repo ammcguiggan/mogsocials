@@ -36,7 +36,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="py-24 px-6" style={{ background: "rgba(255,255,255,0.01)" }}>
+    <section id="testimonials" className="py-24 px-6 section-divider" style={{ background: "var(--bg-raised)" }}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <p className="label-tag mb-3">Testimonials</p>
@@ -49,12 +49,14 @@ export default function Testimonials() {
           {testimonials.map(({ quote, name, role, avatar, color }, i) => (
             <div
               key={name}
-              className="glass p-8 flex flex-col gap-6 transition-all duration-700"
+              className="p-8 flex flex-col gap-6 transition-all duration-700"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0)" : "translateY(40px)",
                 transitionDelay: `${i * 120}ms`,
-                borderTop: `2px solid ${color}30`,
+                background: "var(--bg-input)",
+                border: "1px solid var(--border-ui)",
+                borderTop: `2px solid ${color}`,
               }}
             >
               {/* Stars */}

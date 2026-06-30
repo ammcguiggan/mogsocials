@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 py-10 px-6 text-center">
+    <footer className="section-divider py-10 px-6 text-center" style={{ background: "var(--bg-raised)" }}>
       <p className="text-lg font-black text-white uppercase tracking-tight mb-2">
         Mog<span style={{ color: "#0057ff" }}>Socials</span>
       </p>

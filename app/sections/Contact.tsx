@@ -10,11 +10,10 @@ export default function Contact() {
     setSent(true);
   };
 
-  const inputClass =
-    "w-full glass px-4 py-3 text-white placeholder-white/20 text-sm outline-none focus:border-blade/50 border border-white/07 transition-all duration-200 bg-transparent font-light tracking-wide";
+  const inputClass = "input-field";
 
   return (
-    <section id="contact" className="py-24 px-6">
+    <section id="contact" className="py-24 px-6 section-divider">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <p className="label-tag mb-3">Contact</p>
@@ -33,7 +32,7 @@ export default function Contact() {
             <p className="text-white/40 text-sm">Expect a reply within 24 hours.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="glass p-8 flex flex-col gap-3 border border-white/06">
+          <form onSubmit={handleSubmit} className="glass p-8 flex flex-col gap-3">
             <div className="grid md:grid-cols-2 gap-3">
               <input
                 className={inputClass}

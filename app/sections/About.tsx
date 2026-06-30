@@ -19,7 +19,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="py-24 px-6 overflow-hidden" style={{ background: "rgba(255,255,255,0.01)" }}>
+    <section id="about" className="py-24 px-6 overflow-hidden section-divider" style={{ background: "var(--bg-raised)" }}>
       <div ref={ref} className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Left — text */}
         <div
@@ -49,7 +49,7 @@ export default function About() {
           style={{ opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(50px)", transitionDelay: "150ms" }}
         >
           {values.map(({ label, desc }) => (
-            <div key={label} className="glass p-5 group hover:border-white/12 transition-all">
+            <div key={label} className="p-5 group transition-all" style={{ background: "var(--bg-input)", border: "1px solid var(--border-ui)" }}>
               <p className="text-gradient font-black text-lg mb-1">{label}</p>
               <p className="text-white/50 text-sm">{desc}</p>
             </div>

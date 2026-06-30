@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --blade:   #0057ff;
-  --acid:    #c8ff00;
-  --chrome:  #6b7280;
-  --steel:   #111118;
-  --obsidian:#050507;
+  /* ── Depth tier palette ─────────────────────────────── */
+  --bg-base:    #050507;   /* body — deepest layer          */
+  --bg-raised:  #0e0e14;   /* cards, form wrapper           */
+  --bg-input:   #13131a;   /* inputs — visibly above cards  */
+  --border-sub: rgba(255,255,255,0.06);  /* structural dividers */
+  --border-ui:  rgba(255,255,255,0.10);  /* interactive borders */
+
+  /* ── Accent tokens ──────────────────────────────────── */
+  --blade:    #0057ff;
+  --acid:     #c8ff00;
+  --chrome:   #6b7280;
 }
 
 * {
@@ -16,21 +22,19 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: #050507;
+  background: var(--bg-base);
   color: #f5f5f5;
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   overflow-x: hidden;
 }
 
-/* Scrollbar — thin chrome line */
+/* Scrollbar — single blade-blue line */
 ::-webkit-scrollbar { width: 2px; }
-::-webkit-scrollbar-track { background: #050507; }
-::-webkit-scrollbar-thumb { background: #0057ff; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--blade); }
 
 /* Selection */
 ::selection {
@@ -39,7 +43,8 @@ body {
 }
 
 @layer utilities {
-  /* Sharp gradient text: white → acid green */
+
+  /* ── Text ───────────────────────────────────────────── */
   .text-gradient {
     background: linear-gradient(90deg, #ffffff 0%, #c8ff00 100%);
     -webkit-background-clip: text;
@@ -47,42 +52,50 @@ body {
     background-clip: text;
   }
 
-  /* Blue accent glow — used sparingly on blade-colored elements */
-  .glow-blade {
-    box-shadow: 0 0 18px rgba(0, 87, 255, 0.45);
-  }
-
-  /* Acid green accent glow */
-  .glow-acid {
-    box-shadow: 0 0 18px rgba(200, 255, 0, 0.35);
-  }
-
-  /* High-contrast dark card surface, sharp 1px border */
-  .glass {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-  }
-
-  /* Sharp rectangular button base */
-  .btn-sharp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  /* Section label: tiny, spaced, chrome */
+  .label-tag {
+    font-size: 0.65rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    padding: 0.75rem 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: all 0.15s ease;
+    color: var(--chrome);
   }
 
-  .btn-sharp:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.35);
+  /* ── Surfaces ───────────────────────────────────────── */
+
+  /* Card / container — lifted off body bg */
+  .glass {
+    background: var(--bg-raised);
+    border: 1px solid var(--border-sub);
   }
 
-  /* Primary blade-fill button */
+  /* Input field — one level above cards */
+  .input-field {
+    width: 100%;
+    background: var(--bg-input);
+    border: 1px solid var(--border-ui);
+    padding: 0.75rem 1rem;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .input-field::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Focus: blade-blue border + faint glow */
+  .input-field:focus {
+    border-color: var(--blade);
+    box-shadow: 0 0 0 1px rgba(0, 87, 255, 0.25);
+  }
+
+  /* ── Buttons ────────────────────────────────────────── */
+
+  /* Primary: solid blade blue */
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -92,30 +105,55 @@ body {
     text-transform: uppercase;
     font-size: 0.8rem;
     padding: 0.75rem 2rem;
-    background: #0057ff;
+    background: var(--blade);
     color: #fff;
-    transition: all 0.15s ease;
+    border: 1px solid var(--blade);
+    transition: background 0.15s ease, box-shadow 0.15s ease;
   }
 
   .btn-primary:hover {
     background: #0047d4;
-    box-shadow: 0 0 24px rgba(0, 87, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 87, 255, 0.45);
   }
 
-  /* Subtle grid overlay */
+  /* Secondary: transparent with visible border */
+  .btn-sharp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 0.75rem 2rem;
+    background: transparent;
+    color: rgba(255,255,255,0.7);
+    border: 1px solid var(--border-ui);
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .btn-sharp:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.28);
+    color: #fff;
+  }
+
+  /* ── Layout helpers ─────────────────────────────────── */
+
+  /* Thin border between major sections */
+  .section-divider {
+    border-top: 1px solid var(--border-sub);
+  }
+
+  /* 80×80 grid overlay */
   .grid-overlay {
     background-image:
-      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      linear-gradient(var(--border-sub) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-sub) 1px, transparent 1px);
     background-size: 80px 80px;
   }
 
-  /* Section label style */
-  .label-tag {
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--chrome);
-  }
+  /* Glow accents */
+  .glow-blade { box-shadow: 0 0 18px rgba(0, 87, 255, 0.45); }
+  .glow-acid  { box-shadow: 0 0 18px rgba(200, 255, 0, 0.35); }
 }

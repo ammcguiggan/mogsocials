@@ -43,7 +43,7 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <section id="portfolio" className="py-24 px-6">
+    <section id="portfolio" className="py-24 px-6 section-divider">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <p className="label-tag mb-3">Results</p>
@@ -56,11 +56,13 @@ export default function Portfolio() {
           {projects.map(({ brand, category, result, gradient, tag }, i) => (
             <div
               key={brand}
-              className="relative overflow-hidden glass group cursor-default transition-all duration-500"
+              className="relative overflow-hidden group cursor-default transition-all duration-500"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0) scale(1)" : "translateY(30px) scale(0.97)",
                 transitionDelay: `${i * 100}ms`,
+                background: "var(--bg-raised)",
+                border: "1px solid var(--border-ui)",
               }}
             >
               {/* Gradient bar */}

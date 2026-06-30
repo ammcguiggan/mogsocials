@@ -63,7 +63,7 @@ export default function Hero() {
         </div>
 
         {/* Stats row */}
-        <div className="mt-20 mb-8 grid grid-cols-3 gap-0 max-w-lg mx-auto border border-white/08 divide-x divide-white/08">
+        <div className="mt-20 mb-8 grid grid-cols-3 gap-0 max-w-lg mx-auto divide-x" style={{ background: "var(--bg-raised)", border: "1px solid var(--border-ui)", borderColor: "var(--border-ui)" }}>
           {[
             { val: "200+", label: "Brands Grown" },
             { val: "50M+", label: "Impressions" },

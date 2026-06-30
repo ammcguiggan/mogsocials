@@ -131,7 +131,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(40px)",
         transitionDelay: `${index * 80}ms`,
-        boxShadow: hovered ? `0 20px 60px ${service.glow}` : "none",
+        boxShadow: hovered ? `0 16px 48px ${service.glow}, inset 0 1px 0 rgba(255,255,255,0.04)` : "inset 0 1px 0 rgba(255,255,255,0.03)",
       }}
     >
       {/* Icon container — circular halo on hover */}
@@ -140,10 +140,11 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
         style={{
           color: service.color,
           background: hovered
-            ? `radial-gradient(circle, ${service.color}18 0%, transparent 80%)`
-            : "rgba(255,255,255,0.04)",
-          boxShadow: hovered ? `0 0 20px ${service.color}30` : "none",
-          transform: hovered ? "scale(1.08)" : "scale(1)",
+            ? `radial-gradient(circle, ${service.color}1a 0%, transparent 80%)`
+            : "var(--bg-input)",
+          border: `1px solid ${hovered ? service.color + "30" : "rgba(255,255,255,0.06)"}`,
+          boxShadow: hovered ? `0 0 16px ${service.color}25` : "none",
+          transform: hovered ? "scale(1.06)" : "scale(1)",
         }}
       >
         {service.icon}
@@ -165,7 +166,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 px-6">
+    <section id="services" className="py-24 px-6 section-divider">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <p className="label-tag mb-3">What We Do</p>
