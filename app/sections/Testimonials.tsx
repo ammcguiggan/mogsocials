@@ -21,7 +21,7 @@ const testimonials = [
     name: "Dev M.",
     role: "Founder, Bloom Theory",
     avatar: "DM",
-    color: "#6b7280",
+    color: "#c8ff00",
   },
 ];
 
